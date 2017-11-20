@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.umutserifler.beerworld.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/beerlistViewRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/activity_bottom_margin">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="20"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinnerForBeerChoosing"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            </Spinner>
+
+            <ListView
+                android:id="@+id/beerListView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="19"
+                android:layout_gravity="center"
+                android:cacheColorHint="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" >
+            </ListView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectedBeerViewRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray">
+
+
+        <ImageButton
+            android:id="@+id/selectBeerFavouriteImageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:id="@+id/selectedBeerViewCloseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/popup_close_off"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:weightSum="4">
+
+
+                <ImageView
+                    android:id="@+id/selectedBeerImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/selectedBeerInfoEditText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent"
+                android:focusable="false"/>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
